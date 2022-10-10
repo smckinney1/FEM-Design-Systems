@@ -6,7 +6,7 @@ const Button = styled.button(
     border-radius: 4px;
     cursor: pointer;
     font-family: ${text.primaryFont};
-    font-size: 1rem;
+    font-size: ${text.typeScale.paragraph};
     padding: 8px 12px;
 
     &:active {

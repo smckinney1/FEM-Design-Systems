@@ -5,13 +5,24 @@ const Button = styled.button(
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-family: ${text.primaryFont};
     font-size: ${text.typeScale.paragraph};
     padding: 8px 12px;
+    transition: background-color 0.2s linear, color 0.2s linear; // Causes slight fade-in effect
 
     &:active {
       background: ${colors.primaryActive};
     }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  `
+);
+
+export const PrimaryButton = styled(Button)`
+  ${({ theme: { colors } }) => css`
+    background: ${colors.primary};
+    color: ${colors.textInverted};
 
     &:hover {
       background: ${colors.primaryHover};
@@ -22,13 +33,6 @@ const Button = styled.button(
     &:disabled:hover {
       background: ${colors.primaryDisabled};
     }
-  `
-);
-
-export const PrimaryButton = styled(Button)`
-  ${({ theme: { colors } }) => css`
-    background: ${colors.primary};
-    color: ${colors.textInverted};
   `};
 `;
 

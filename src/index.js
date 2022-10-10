@@ -6,14 +6,14 @@ import { defaultTheme, GlobalStyle } from './utils';
 import { PrimaryButton, SecondaryButton, TertiaryButton } from './components/Buttons';
 
 const App = () => (
-  <>
+  <main>
     <PrimaryButton>Primary</PrimaryButton>
-    <PrimaryButton disabled>Primary Disabled</PrimaryButton>
     <SecondaryButton>Secondary</SecondaryButton>
-    <SecondaryButton disabled>Secondary Disabled</SecondaryButton>
     <TertiaryButton>Tertiary</TertiaryButton>
+    <PrimaryButton disabled>Primary Disabled</PrimaryButton>
+    <SecondaryButton disabled>Secondary Disabled</SecondaryButton>
     <TertiaryButton disabled>Tertiary</TertiaryButton>
-  </>
+  </main>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

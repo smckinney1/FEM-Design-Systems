@@ -91,6 +91,7 @@ export const TertiaryButton = styled(Button)`
 
 /* **************** STATUS VARIANTS **************** */
 
+// NOTE: for simplicity of this project, going to assume that there is no secondary/tertiary state for the warning buttons. (A real-life design system would likely want to account for those as well, probably by using props rather than exporting a separate variant for every single style.)
 export const ErrorButton = styled(Button)`
   ${({ theme: { colors, status } }) => css`
     background: ${status.errorColor};

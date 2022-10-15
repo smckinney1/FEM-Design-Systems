@@ -3,7 +3,14 @@ import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 
 import { defaultTheme, GlobalStyle } from './utils';
-import { PrimaryButton, SecondaryButton, TertiaryButton } from './components/Buttons';
+import {
+  ErrorButton,
+  PrimaryButton,
+  SecondaryButton,
+  SuccessButton,
+  TertiaryButton,
+  WarningButton,
+} from './components/Buttons.styled';
 
 const App = () => (
   <main>
@@ -13,6 +20,17 @@ const App = () => (
     <PrimaryButton disabled>Primary Disabled</PrimaryButton>
     <SecondaryButton disabled>Secondary Disabled</SecondaryButton>
     <TertiaryButton disabled>Tertiary</TertiaryButton>
+
+    <hr />
+
+    <PrimaryButton size="small">Small button</PrimaryButton>
+    <PrimaryButton size="large">Large button</PrimaryButton>
+
+    <hr />
+
+    <ErrorButton>Error button</ErrorButton>
+    <SuccessButton>Success button</SuccessButton>
+    <WarningButton>Warning button</WarningButton>
   </main>
 );
 

@@ -3,13 +3,14 @@ import { primaryFont, typeScale } from './typography';
 
 export const defaultTheme = {
   colors: {
+    formBackground: neutral[100],
+    ghost: neutral[100],
+    ghostDisabled: neutral[400],
+    ghostHover: primary[100],
     primary: primary[400],
     primaryActive: primary[500],
     primaryDisabled: neutral[400],
     primaryHover: primary[300],
-    ghost: neutral[100],
-    ghostDisabled: neutral[400],
-    ghostHover: primary[100],
     text: neutral[600],
     textInverted: neutral[100],
   },

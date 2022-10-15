@@ -4,17 +4,21 @@ import { ThemeProvider } from 'styled-components';
 
 import { defaultTheme, GlobalStyle } from './utils';
 import {
-  ErrorButton,
-  PrimaryButton,
-  SecondaryButton,
-  SuccessButton,
-  TertiaryButton,
-  WarningButton,
-} from './components/Buttons';
+  // Buttons
+  // ErrorButton,
+  // PrimaryButton,
+  // SecondaryButton,
+  // SuccessButton,
+  // TertiaryButton,
+  // WarningButton,
+
+  // Modals
+  SignUpModal,
+} from './components';
 
 const App = () => (
   <main>
-    <PrimaryButton>Primary</PrimaryButton>
+    {/* <PrimaryButton>Primary</PrimaryButton>
     <SecondaryButton>Secondary</SecondaryButton>
     <TertiaryButton>Tertiary</TertiaryButton>
     <PrimaryButton disabled>Primary Disabled</PrimaryButton>
@@ -31,6 +35,10 @@ const App = () => (
     <ErrorButton>Error button</ErrorButton>
     <SuccessButton>Success button</SuccessButton>
     <WarningButton>Warning button</WarningButton>
+
+    <hr /> */}
+
+    <SignUpModal />
   </main>
 );
 

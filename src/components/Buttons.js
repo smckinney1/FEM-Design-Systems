@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const Button = styled.button(
@@ -38,6 +39,10 @@ const Button = styled.button(
     `}
   `
 );
+
+Button.propTypes = {
+  size: PropTypes.oneOf(['small', 'large']),
+};
 
 /* **************** MAIN VARIANTS **************** */
 

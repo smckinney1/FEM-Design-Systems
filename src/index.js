@@ -10,7 +10,7 @@ import {
   SuccessButton,
   TertiaryButton,
   WarningButton,
-} from './components/Buttons.styled';
+} from './components/Buttons';
 
 const App = () => (
   <main>

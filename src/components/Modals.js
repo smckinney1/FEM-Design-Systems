@@ -1,3 +1,4 @@
+import { animated, useSpring } from '@react-spring/web';
 import styled, { css } from 'styled-components';
 
 import { CloseIcon, Illustrations } from '../assets';
@@ -48,14 +49,24 @@ const SignUpText = styled.p`
   max-width: 70%;
 `;
 
-export const SignUpModal = () => (
-  <Container>
-    <img src={Illustrations.SignUp} alt="" />
-    <SignUpHeader>Sign up!</SignUpHeader>
-    <SignUpText>Sign up today to receive access to our awesome app.</SignUpText>
-    <PrimaryButton>Sign up</PrimaryButton>
-    <CloseButton aria-label="Close modal">
-      <CloseIcon />
-    </CloseButton>
-  </Container>
-);
+export const SignUpModal = ({ isOpen, setIsOpen }) => {
+  // TODO: Not accessible (doesn't hide from keyboard or screen reader). Demonstration only.
+  const styles = useSpring({
+    opacity: isOpen ? 1 : 0,
+    transform: isOpen ? 'translateY(0)' : 'translateY(-200%)',
+  });
+
+  return (
+    <animated.div style={styles}>
+      <Container>
+        <img src={Illustrations.SignUp} alt="" />
+        <SignUpHeader>Sign up!</SignUpHeader>
+        <SignUpText>Sign up today to receive access to our awesome app.</SignUpText>
+        <PrimaryButton>Sign up</PrimaryButton>
+        <CloseButton aria-label="Close modal" onClick={() => setIsOpen(false)}>
+          <CloseIcon />
+        </CloseButton>
+      </Container>
+    </animated.div>
+  );
+};

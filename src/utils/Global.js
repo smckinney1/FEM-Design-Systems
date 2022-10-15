@@ -8,12 +8,19 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body, #root, main {
+    height: 100%;
+  }
+
   body {
-    margin: 0;
     font-family: ${({ theme }) => theme.text.primaryFont};
+    margin: 0;
   }
 
   main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     width: 90%;
   }

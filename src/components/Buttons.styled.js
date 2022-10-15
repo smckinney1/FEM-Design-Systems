@@ -95,12 +95,7 @@ export const TertiaryButton = styled(Button)`
 export const ErrorButton = styled(Button)`
   ${({ theme: { colors, status } }) => css`
     background: ${status.errorColor};
-    color: ${colors.text};
-
-    &:active,
-    &:hover {
-      color: ${colors.textInverted};
-    }
+    color: ${colors.textInverted};
 
     &:active {
       background: ${status.errorColorActive};
